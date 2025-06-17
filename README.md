@@ -172,7 +172,7 @@ O Storybook é automaticamente deployado para GitHub Pages a cada push na branch
 
 1. **Criar repositório no GitHub**:
    ```bash
-   git remote add origin https://github.com/seu-usuario/seu-repositorio.git
+   git remote add origin https://github.com/guigonzalez/design-system.git
    git branch -M main
    git push -u origin main
    ```
@@ -185,7 +185,7 @@ O Storybook é automaticamente deployado para GitHub Pages a cada push na branch
 
 3. **Deploy automático**:
    - O workflow `.github/workflows/deploy-storybook.yml` fará o deploy automaticamente
-   - Acesse: `https://seu-usuario.github.io/seu-repositorio`
+   - Acesse: `https://guigonzalez.github.io/design-system`
 
 ### Build manual
 ```bash
