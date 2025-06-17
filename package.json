@@ -19,6 +19,7 @@
     "storybook": "NODE_OPTIONS=\"--no-warnings\" storybook dev -p 6006",
     "storybook:verbose": "storybook dev -p 6006",
     "build-storybook": "storybook build",
+    "build-storybook:gh-pages": "storybook build -o storybook-static",
     "test": "vitest",
     "test:watch": "vitest --watch",
     "test:coverage": "vitest --coverage",

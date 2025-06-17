@@ -164,6 +164,34 @@ O Storybook está disponível em `http://localhost:6006` e inclui:
 - **Components/Checkbox**: Checkboxes com estado indeterminado
 - **Components/RadioButton**: Grupos de radio buttons
 
+## 🌐 GitHub Pages
+
+O Storybook é automaticamente deployado para GitHub Pages a cada push na branch `main`.
+
+### Configuração
+
+1. **Criar repositório no GitHub**:
+   ```bash
+   git remote add origin https://github.com/seu-usuario/seu-repositorio.git
+   git branch -M main
+   git push -u origin main
+   ```
+
+2. **Habilitar GitHub Pages**:
+   - Vá para Settings > Pages
+   - Source: Deploy from a branch
+   - Branch: `gh-pages` (será criada automaticamente)
+   - Folder: `/ (root)`
+
+3. **Deploy automático**:
+   - O workflow `.github/workflows/deploy-storybook.yml` fará o deploy automaticamente
+   - Acesse: `https://seu-usuario.github.io/seu-repositorio`
+
+### Build manual
+```bash
+npm run build-storybook:gh-pages
+```
+
 ## ⚠️ Warnings
 
 O projeto pode exibir alguns warnings do Node.js e Storybook que são normais e não afetam a funcionalidade:
