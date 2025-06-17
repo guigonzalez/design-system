@@ -1,0 +1,119 @@
+.design-system-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  text-decoration: none;
+  outline: none;
+  user-select: none;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Estados de hover */
+.design-system-button--primary:hover:not(.design-system-button--disabled) {
+  background-color: #2563eb !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.design-system-button--secondary:hover:not(.design-system-button--disabled) {
+  background-color: #e2e8f0 !important;
+  border-color: #cbd5e1 !important;
+}
+
+.design-system-button--success:hover:not(.design-system-button--disabled) {
+  background-color: #16a34a !important;
+}
+
+.design-system-button--warning:hover:not(.design-system-button--disabled) {
+  background-color: #d97706 !important;
+}
+
+.design-system-button--error:hover:not(.design-system-button--disabled) {
+  background-color: #dc2626 !important;
+}
+
+.design-system-button--ghost:hover:not(.design-system-button--disabled) {
+  background-color: #f1f5f9 !important;
+  border-color: #3b82f6 !important;
+}
+
+/* Estados de active */
+.design-system-button--primary:active:not(.design-system-button--disabled) {
+  background-color: #1d4ed8 !important;
+  transform: translateY(0);
+}
+
+.design-system-button--secondary:active:not(.design-system-button--disabled) {
+  background-color: #cbd5e1 !important;
+}
+
+/* Estados especiais */
+.design-system-button--disabled {
+  cursor: not-allowed !important;
+  pointer-events: none;
+}
+
+.design-system-button--loading {
+  cursor: wait !important;
+}
+
+.design-system-button--full-width {
+  width: 100% !important;
+}
+
+/* Loader */
+.design-system-button__loader {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.design-system-button__spinner {
+  width: 16px;
+  height: 16px;
+  animation: spin 1s linear infinite;
+}
+
+.design-system-button--sm .design-system-button__spinner {
+  width: 14px;
+  height: 14px;
+}
+
+.design-system-button--lg .design-system-button__spinner {
+  width: 18px;
+  height: 18px;
+}
+
+.design-system-button__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Animação do spinner */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Focus states para acessibilidade */
+.design-system-button:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Responsividade */
+@media (max-width: 640px) {
+  .design-system-button--lg {
+    padding: 12px 16px !important;
+    font-size: 1rem !important;
+    min-height: 40px !important;
+  }
+} 
